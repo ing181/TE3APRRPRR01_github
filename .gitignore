@@ -1,0 +1,21 @@
+# Ignore Everything
+*
+# But not
+!*.cpp
+!*.h
+!*.pro
+!*.ts
+!*.grc
+!*.rc
+!*.ui
+!*.png
+!*.jpg
+!*.ico
+!LICENSE
+# Or directories
+!*/
+# Build folder ska inte vara med
+**/build-*
+# and this
+!.gitignore
+!README.md
