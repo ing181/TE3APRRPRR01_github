@@ -6,6 +6,7 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL,"swedish");
 	int tal[3]; // Fältet deklareras
+	// Du kan lika enkelt hitta det största talet bland många fler
 	for (int i=0; i<3; i++)
 	{
 	  cout << "Mata in tal " << (i+1)<<": ";
