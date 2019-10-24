@@ -23,9 +23,11 @@ int main() {
 	cout << s << endl;  // Adressen skrivs ut
 	cout << *s << endl; // Vi kommer åt innehållet på adressen som s pekar på
 	                    // "dynamiskt allokerad" skrivs ut
-	// När vi är klara ska vi städa efter oss
+	
 	// För att använda metoder hos dynamiskt deklarerade objekt används -> i stället för .
 	cout << s->size() << endl;
+	
+	// När vi är klara ska vi städa efter oss
 	delete s; // Minnet frigörs. Lämnas över till operativsystemet.
 
 	
