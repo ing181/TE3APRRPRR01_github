@@ -1,22 +1,35 @@
 /*
-23. 
-För att slå klubbrekordet i en längdhoppstävling måste hoppet vara längre än 7,92 meter och vindstyrkan högst 2,0 m/s.
-Skriv ett program som låter användaren mata in värden och som skriver ut “Grattis!” om det är nytt rekord.
+Uppgift 23
+Skriv ett program som ändrar ett inmatat namn, med för- och efternamn,
+till exempel “Kalle Anka” till “kalle anka”.
+Det vill säga ändrar första bokstaven i för- och efternamnet från en VERSAL till en gemen.
+
 */
 
 #include <iostream>
 using namespace std;
 int main() {
 	setlocale(LC_ALL,"swedish");
-	float l, v;
-	cout << "Välkommen, kanske har du slagit klubbrekord?" << endl;
-	cout << "Hur långt hoppade du? (meter): ";
-	cin >> l;
-	cout << "Hur mycket blåste et? (m/s): ";
-	cin >> v;
+	string namn;
+	cout << "Mata in ditt För- och efternamn: ";
+	getline(cin,namn);
+	// Att första tecknet ska ändras från VERSAl till gemen, vet vi. 
+	// Första bokstaven i förnamnet
 	
-	if ( (l > 7.92) && (v <= 2) ) // Både villkoren måste vara sanna
-	     cout << "Grattis! Du har det nya klubbrekordet!" << endl;
+	namn[0] = namn[0] + 32; // Kolla ASCCI-tabellen. (UNICODE-tabellen) Där sår det vilka heltal
+	                        // som representerar vilka tecken. Liten bokstav är alltid +32 i
+	                        // förhållande till STOR bokstav
+	                        
+	// Vi måste hitta nästa VERSAL. Vi vet att den kommer
+	// direkt efter mellanslaget mellan för- och efternamn.
+	// Så vi letar upp mellanslaget
 	
+	int mellanslag = namn.find(' ');
+	// Vi vet att efternamnet kommer direkt efter mellanslaget
+	namn[mellanslag+1] = namn[mellanslag+1] + 32; 
+	                        
+	cout << "Välkommen " << namn << endl;
+
+    
 	return 0;
 }

@@ -1,4 +1,5 @@
 /*
+Uppgift 8 (version b)
 En cirkus tillämpar olika priser för inträdet beroende på besökarens ålder.
 Upp till och med 9 år och över 90 år är inträdet gratis. Är du äldre än 9 år och yngre än 90 kostar det 50 kronor.
 Skriv ett program som beräknar vad besökaren ska betala.

@@ -1,4 +1,5 @@
 /*
+Uppgift 5
 Gör ett program som omvandlar ett bråktal till ett tal i blandad form En inmatning av talet 5/3
 ska resultera i utskriften 1 2/3. En programkörning kan se ut så här:
 Mata in täljare och nämnare: 5 3

@@ -1,4 +1,5 @@
 /*
+Uppgift 6
 Gör ett program som låter användaren mata in en tid i sekunder.
 Denna tid ska av programmet omvandlas
 till en tidsangivelse i timmar, minuter och sekunder. Använd endast heltalsvariabler.

@@ -1,4 +1,5 @@
 /*
+Uppgift 3
 Skriv ett program som låter användaren mata in ett flyttal till en flyttalsvariabel.
 Tilldela värdet till en heltalsvariabel. Skriv ut heltalsvariabel. Vad händer? Varför?
 */

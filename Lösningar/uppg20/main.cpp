@@ -1,25 +1,52 @@
 /*
-20. Skriv ett program som läser in en text från tangentbordet till en string-variabel.
-Låt sedan programmet skriva ut hur många tecken som ingår i strängen.
+Uppgift 20
+Utveckla programmet i uppgift 18 med en meny med 5 val.
+De fyra räknesätten och en möjlighet att avsluta.
+Så länge användaren inte väljer att avsluta fortsätter programmet
+och användaren kan mata in nya tal och välja räknesätt.
 */
 
 #include <iostream>
 using namespace std;
 int main() {
 	setlocale(LC_ALL,"swedish");
-	string s;
-	cout << "Skriv in en textsträng, inga mellanslag får användas: ";
-	cin >> s;
-	cout << s << " innehåller " << s.size() << " tecken" << endl;
-	
-	// Här finns tyvärr nyradstecknet kvar, getline avbryter direkt
-	// Vi måste ta bort nyradstecknet så fungerar det.
-	// Pröva att kommentera bort nästa rad, så får du se
-	cin.ignore(1000,'\n');
-	
-	cout << "Skriv in en textsträng, använd gärna mellanslag: ";
-	getline(cin,s);
-	cout << s << " innehåller " << s.size() << " tecken" << endl;
+    float a,b;
+    char raknesatt;
     
+    while (true)  // Evig loop
+    {
+	    cout << "Välj räknesätt" << endl;
+	    cout << "+ för addition" << endl;
+	    cout << "- för subtraktion" << endl;
+	    cout << "* för multiplikation" << endl;
+	    cout << "/ för division" << endl;
+	    cout << "a för att avsluta" << endl;
+	    
+	    cin >> raknesatt;
+	    if ( (raknesatt == 'a') || (raknesatt == 'A') )
+	    {
+	    	break; // Hoppar ur, går till rad 50
+	    }
+	    cout << "Mata in första talet ";
+	    cin >> a;
+	    cout << "Mata in andra talet ";
+	    cin >> b;
+	    
+	    switch (raknesatt)
+	    {
+	    	case '+':
+	    		cout << a << '+' << b << '=' << (a+b) << endl;
+	    	    break;
+	       case '-':
+	    		cout << a << '-' << b << '=' << (a-b) << endl;
+	    	    break;
+	       case '*':
+	    		cout << a << '*' << b << '=' << (a*b) << endl;
+	    	    break;    	
+	       case '/':
+	    		cout << a << '/' << b << '=' << (a/b) << endl;
+	    	    break;    	
+	    }
+    }
 	return 0;
 }

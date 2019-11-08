@@ -1,4 +1,5 @@
 /*
+Uppgift 1
 Skriv ett program som beräknar värdet av a + b - c. Talen 
 a, b och c matas in under programkörning. 
 */

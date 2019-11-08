@@ -1,42 +1,23 @@
 /*
-18. Gör ett program som adderar, subtraherar, multiplicerar eller dividerar
-två inmatade tal. Användaren ska kunna välja +, -, * eller /.
+Uppgift 18
+Gör ett program som frågar efter ett tal.
+Efter inmatning undersöker programmet talet och presenterar en utskrift
+som meddelar om talet är positivt, 0 eller negativt.
 */
 
 #include <iostream>
 using namespace std;
 int main() {
 	setlocale(LC_ALL,"swedish");
-    float a,b;
-    char raknesatt;
-    
-    cout << "Välj räknesätt" << endl;
-    cout << "+ för addition" << endl;
-    cout << "- för subtraktion" << endl;
-    cout << "* för multiplikation" << endl;
-    cout << "/ för division" << endl;
-    
-    cin >> raknesatt;
-    cout << "Mata in första talet ";
-    cin >> a;
-    cout << "Mata in andra talet ";
-    cin >> b;
-    
-    switch (raknesatt)
-    {
-    	case '+':
-    		cout << a << '+' << b << '=' << (a+b) << endl;
-    	    break;
-       case '-':
-    		cout << a << '-' << b << '=' << (a-b) << endl;
-    	    break;
-       case '*':
-    		cout << a << '*' << b << '=' << (a*b) << endl;
-    	    break;    	
-       case '/':
-    		cout << a << '/' << b << '=' << (a/b) << endl;
-    	    break;    	
-    }
+	double d;
+	cout << "Mata in ett tal: ";
+	cin >> d;
+	if (d<0)
+		cout << "Du matade in " << d << " vilket är ett negativt tal" << endl;
+	else if (d>0)
+	    cout << "Du matade in " << d << " vilket är ett positivt tal" << endl;
+	else
+	    cout << "Du matade in talet 0" << endl;
 	
 	return 0;
 }

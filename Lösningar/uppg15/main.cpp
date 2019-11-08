@@ -1,35 +1,43 @@
 /*
-15. Skapa ett program som undersöker om ett heltal är ett primtal
-(Endast delbart med sig själv och 1)
+Uppgift 15
+Skapa ett program som skriver ut en talserie.
+Användaren bestämmer vilket tal som talserien startar
+och slutar med och antalet steg mellan talen.
 */
 
 #include <iostream>
 using namespace std;
 int main() {
 	setlocale(LC_ALL,"swedish");
+	int start, steg, slut;
+	cout << "Välj vilket heltal din talserie ska starta med: ";
+	cin >> start;
+	cout << "Välj steglängden mellan talen: ";
+	cin >> steg;
+	cout << "Välj sista talet som talserien får innehålla: ";
+	cin >> slut;
 	
-	int prim;
-	bool isprim = true;
-	cout << "Välj ett tal som ska undersökas om det är ett primtal: ";
-	cin >> prim;
-	for (int i=2; i<prim; i++)
+	if (start < slut)
 	{
-		
-		if ( (prim % i) == 0 )  // Blir ingen rest vid division med i. Vi kan sluta kolla
-		{
-			isprim = false;
-			break;
-		}
-		
-		
-	}
-	
-	if (isprim)
-			cout << prim << " är ett primtal" << endl;
-	else
-	        cout << prim << " är inget primtal" << endl;
-		
-	
+			for (int i=start; i<=slut; i+=steg)
+			{
+				cout << i << ' ';
+			}
+			cout << endl;
+    }
+    else if (start > slut)
+	{
+			for (int i=start; i>=slut; i-=steg)
+			{
+				cout << i << ' ';
+			}
+			cout << endl;
+    }
+    else
+    {
+    	cout << "Start stop är samma, inte mycket till talserie" << endl;
+    }
+
 	return 0;
-	
+
 }

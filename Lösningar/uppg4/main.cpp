@@ -1,4 +1,5 @@
 /*
+Uppgift 4
 Vilken nytta har man av att kunna deklarera en variabel const?
 const = konstant, går inte att ändra.
 */
