@@ -15,7 +15,8 @@ int main() {
 	{
 		behallning *= ranta; // Den årliga räntan (5%) läggs till
 		behallning += insattning; // Mio sätter in 1000 kronor varje år
-		cout << "Efter " << i << " år finns det " << behallning << " kronor på kontot" << endl;
+	cout << "Efter " << i << " år finns det " << behallning << " kronor på kontot" << endl;
 	}
+	
 	return 0;
 }
