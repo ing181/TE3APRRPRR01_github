@@ -8,7 +8,7 @@ using namespace std;
 void forandra(float falt[]); // Funktionsdeklaration
 void forandra2(float); // Funktionsdeklaration
 int main() {
-	
+	setlocale(LC_ALL,"swedish");
 	float f[3];
 	f[0] = 6.1;
 	f[1] = 1.1;
