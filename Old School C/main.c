@@ -21,7 +21,7 @@ int main() {
           p->y=65;
           int x = (p->x + p->y);
           
-          /* "%d\" betyder: d är en unsigned int "Skriv ut en unsigned int och en radbrytning"
+          /* "%d\n" betyder: d är en unsigned int "Skriv ut en unsigned int och en radbrytning"
           x innehåller data */
           printf("%d\n", x);  /* Utskrift till skärmen */
           
