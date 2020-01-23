@@ -3,6 +3,7 @@
 #include <iostream>
 using namespace std;
 // OBS! &-tecknet
+// Pröva att ta bort &-tecknet
 void test(int &i, char &c);
 int main() {
 
