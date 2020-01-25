@@ -28,7 +28,7 @@ int main() {
           
           
           /* När p inte längre behövs återlämnas minnet
-             till systemet så att det kan återanvändas */
+             till operativsystemet så att det kan återanvändas */
           free(p);
 	
 	return 0;
