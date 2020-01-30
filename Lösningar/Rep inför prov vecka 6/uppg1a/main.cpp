@@ -32,7 +32,6 @@ int main() {
 }
 string byt(string in, char old_char, char new_char)
 {
-	int langd = in.size();
 	int i = 0;
 	while (i>=0) 
 	{
